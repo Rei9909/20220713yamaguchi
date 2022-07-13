@@ -11,10 +11,6 @@ class TodoController extends Controller
         $items = DB::select('select * from contacts');
         return view('index', ['items' => $items]);
     }
-    public function add()
-    {
-        return view('/todo/create');
-    }
     public function create(Request $request)
     {
         $param = [
